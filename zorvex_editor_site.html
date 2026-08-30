@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZORVEX | Video Editor</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:#070707;color:#fff;line-height:1.8;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:-30%;
+  background:radial-gradient(circle at 50% 20%,#242424 0,transparent 30%),
+             radial-gradient(circle at 80% 70%,#151515 0,transparent 25%);
+  pointer-events:none;z-index:-1;
+}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:10;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 7%;background:rgba(7,7,7,.72);
+  backdrop-filter:blur(14px);border-bottom:1px solid #222;
+}
+.logo{font-size:25px;font-weight:900;letter-spacing:3px}
+.logo span{color:#aaa}
+nav a{color:#ddd;text-decoration:none;margin-right:22px;font-size:14px}
+nav a:hover{color:#fff}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:120px 7% 70px;position:relative;
+}
+.hero .badge{
+  display:inline-block;border:1px solid #333;border-radius:999px;
+  padding:6px 14px;color:#aaa;font-size:12px;margin-bottom:18px;
+}
+h1{font-size:clamp(55px,13vw,150px);line-height:.9;letter-spacing:8px}
+.hero h1 span{color:#888}
+.hero p{max-width:600px;margin:25px auto;color:#aaa;font-size:16px}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 24px;border-radius:12px;
+  text-decoration:none;font-weight:bold;border:1px solid #444;
+  color:#fff;background:#161616;transition:.2s;
+}
+.btn:hover{transform:translateY(-3px);background:#222}
+.btn.main{background:#fff;color:#000;border-color:#fff}
+section{padding:90px 7%;max-width:1250px;margin:auto}
+.title{font-size:35px;margin-bottom:10px}
+.sub{color:#777;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  min-height:230px;border:1px solid #242424;border-radius:20px;
+  background:linear-gradient(145deg,#151515,#0b0b0b);
+  display:flex;align-items:end;padding:22px;position:relative;overflow:hidden;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-6px);border-color:#555}
+.card:after{
+  content:"";position:absolute;width:150px;height:150px;border-radius:50%;
+  background:#292929;filter:blur(30px);top:-50px;left:-30px;opacity:.6
+}
+.card h3,.card p{position:relative;z-index:1}
+.card p{color:#888;font-size:13px}
+.about{
+  display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center
+}
+.panel{
+  border:1px solid #242424;border-radius:24px;padding:30px;background:#101010
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.stat{border:1px solid #282828;border-radius:16px;padding:15px;text-align:center}
+.stat b{font-size:24px;display:block}
+.stat span{font-size:12px;color:#777}
+.contact{text-align:center}
+footer{text-align:center;padding:35px;color:#666;border-top:1px solid #1d1d1d}
+@media(max-width:750px){
+  nav{padding:15px 5%}
+  nav div:last-child{display:none}
+  .grid,.about{grid-template-columns:1fr}
+  section{padding:70px 5%}
+  h1{letter-spacing:4px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ZOR<span>VEX</span></div>
+  <div>
+    <a href="#works">نمونه‌کارها</a>
+    <a href="#about">درباره من</a>
+    <a href="#contact">همکاری</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="badge">VIDEO EDITOR • GAMING • SHORT FORM</div>
+    <h1>ZOR<span>VEX</span></h1>
+    <p>ادیت‌های سینمایی، گیمینگ و ریلز با ریتم سریع و استایل خاص.</p>
+    <div class="buttons">
+      <a class="btn main" href="#works">دیدن نمونه‌کارها</a>
+      <a class="btn" href="#contact">درخواست همکاری</a>
+    </div>
+  </div>
+</header>
+
+<section id="works">
+  <h2 class="title">نمونه‌کارها</h2>
+  <p class="sub">اینجا می‌تونی ویدیوهای ادیت‌شده خودت رو قرار بدی.</p>
+  <div class="grid">
+    <div class="card"><div><h3>🎮 PUBG EDIT</h3><p>Gaming / Beat Sync</p></div></div>
+    <div class="card"><div><h3>⚡ AMV / Anime</h3><p>Velocity / Effects</p></div></div>
+    <div class="card"><div><h3>🔥 Reels Edit</h3><p>Short Form / Trending</p></div></div>
+    <div class="card"><div><h3>🎬 Cinematic</h3><p>Color / Motion</p></div></div>
+    <div class="card"><div><h3>💥 Montage</h3><p>Gaming Highlights</p></div></div>
+    <div class="card"><div><h3>🖤 Custom Edit</h3><p>Your Style</p></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="panel">
+    <h2 class="title">درباره ZORVEX</h2>
+    <p style="color:#aaa">یک ادیتور خلاق برای ساخت ویدیوهایی که معمولی دیده نمی‌شن. این بخش رو می‌تونی با معرفی واقعی خودت، نرم‌افزارهایی که استفاده می‌کنی و سبک کارت کامل کنی.</p>
+    <div class="stats">
+      <div class="stat"><b>∞</b><span>ایده</span></div>
+      <div class="stat"><b>24/7</b><span>Creative Mode</span></div>
+      <div class="stat"><b>4K</b><span>Quality</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2 class="title">سبک کار</h2>
+    <p style="color:#aaa">PUBG • Gaming • AMV • Reels • Velocity • Cinematic • Beat Sync</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="title">همکاری با من</h2>
+  <p class="sub">برای سفارش ادیت یا همکاری، از طریق شبکه‌های اجتماعی پیام بده.</p>
+  <div class="buttons">
+    <a class="btn main" href="#" onclick="alert('لینک اینستاگرامت را در کد جایگزین کن!');return false;">Instagram</a>
+    <a class="btn" href="#" onclick="alert('لینک یوتیوبت را در کد جایگزین کن!');return false;">YouTube</a>
+  </div>
+</section>
+
+<footer>© 2026 ZORVEX — All Rights Reserved.</footer>
+</body>
+</html>
